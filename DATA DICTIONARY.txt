@@ -1,0 +1,27 @@
+DATA DICTIONARY
+---------------
+
+Column Name             | Description                                                            | Data Type | Possible Values / Codes
+------------------------|------------------------------------------------------------------------|-----------|-------------------------------------------------------------
+USMER                   | Indicates if the medical unit is part of the USMER monitoring network  | int64     | 1 = Yes, 2 = No
+MEDICAL_UNIT            | Code for the type/category of the medical unit/hospital                | int64     | Integer ID (requires mapping from data dictionary)
+SEX                     | Patient’s biological sex                                               | int64     | 1 = Male, 2 = Female
+PATIENT_TYPE            | Type of care received                                                   | int64     | 1 = Ambulatory (Outpatient), 2 = Hospitalized (Inpatient)
+DATE_DIED               | Date of death (if applicable)                                           | object    | dd/mm/yyyy, "9999-99-99" or 97 = Patient did not die
+INTUBED                 | Patient required intubation                                             | int64     | 1 = Yes, 2 = No, 97 = Unknown
+PNEUMONIA               | Patient diagnosed with pneumonia                                        | int64     | 1 = Yes, 2 = No, 97 = Unknown
+AGE                     | Patient’s age in years                                                  | int64     | 0–120
+PREGNANT                | Patient was pregnant (only for females of reproductive age)             | int64     | 1 = Yes, 2 = No, 97 = Not applicable / Unknown
+DIABETES                | Patient diagnosed with diabetes                                         | int64     | 1 = Yes, 2 = No, 97 = Unknown
+COPD                    | Patient diagnosed with Chronic Obstructive Pulmonary Disease            | int64     | 1 = Yes, 2 = No, 97 = Unknown
+ASTHMA                  | Patient diagnosed with asthma                                           | int64     | 1 = Yes, 2 = No, 97 = Unknown
+INMSUPR                 | Patient is immunosuppressed (due to illness or treatment)               | int64     | 1 = Yes, 2 = No, 97 = Unknown
+HIPERTENSION            | Patient diagnosed with hypertension                                     | int64     | 1 = Yes, 2 = No, 97 = Unknown
+OTHER_DISEASE           | Patient has other significant diseases not listed separately            | int64     | 1 = Yes, 2 = No, 97 = Unknown
+CARDIOVASCULAR          | Patient diagnosed with cardiovascular disease (excluding hypertension)  | int64     | 1 = Yes, 2 = No, 97 = Unknown
+OBESITY                 | Patient is clinically obese                                             | int64     | 1 = Yes, 2 = No, 97 = Unknown
+RENAL_CHRONIC           | Patient diagnosed with chronic kidney disease                           | int64     | 1 = Yes, 2 = No, 97 = Unknown
+TOBACCO                 | Patient uses tobacco                                                    | int64     | 1 = Yes, 2 = No, 97 = Unknown
+CLASIFFICATION_FINAL    | Final classification of COVID-19 case                                   | int64     | 1 = Confirmed by lab, 2 = Confirmed by epidemiologic link,
+                        |                                                                        |           | 3 = Confirmed by expert judgment, 4–7 = Suspected
+ICU                     | Patient admitted to Intensive Care Unit                                 | int64     | 1 = Yes, 2 = No, 97 = Unknown
